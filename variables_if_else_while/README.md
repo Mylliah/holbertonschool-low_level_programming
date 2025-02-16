@@ -14,4 +14,13 @@ program [1-last_digit.c](https://github.com/Mylliah/holbertonschool-low_level_pr
 
     Program wich use loops printing the alphabet in lowercase, only using 'putchar' twice :
 
-program [2-print_alphabet.c]()
+program [2-print_alphabet.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/2-print_alphabet.c)
+
+### ---- Task 3 : 
+
+    Program wich use loops printing the alphabet in lowercase, and then in uppercase, only using 'putchar' three times :
+
+program [3-print_alphabets.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/3-print_alphabets.c)
+
+
+
