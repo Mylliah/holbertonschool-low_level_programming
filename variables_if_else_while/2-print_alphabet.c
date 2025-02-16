@@ -4,9 +4,10 @@
  *
  * Return: Always 0 (Success)
  */
-int main (void)
+int main(void)
 {
 	char alpha = 'a';
+
 	while (alpha <= 'z')
 	{
 	putchar(alpha);
@@ -15,4 +16,3 @@ int main (void)
 	putchar('\n');
 	return (0);
 }
-
