@@ -25,9 +25,22 @@ program [3-print_alphabets.c](https://github.com/Mylliah/holbertonschool-low_lev
 
 ### ---- Task 4 :
 
-    Programm wich use loops printing all the letters of alphabet in lowercase except 'e' and 'q' and only using 'putchar' twice :
+    Program wich use loops printing all the letters of alphabet in lowercase except 'e' and 'q' and only using 'putchar' twice :
 
 program [4-print_alphabt.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/4-print_alphabt.c)
 
+
+### ---- Task 5 :
+
+    Program wich print all single digit numbers of base 10 starting from 0 :
+
+program [5-print_numbers.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/5-print_numbers.c)
+
+
+### ---- Task 6 :
+
+    Program wich print all single digit numbers of base 10 starting from 0, not using any variable of type char, only use th putchar function twice (printf, puts, etc. is forbidden) :
+
+program [6-print_numberz.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/6-print_numberz.c)
 
 
