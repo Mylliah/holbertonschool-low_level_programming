@@ -12,20 +12,20 @@ program [1-last_digit.c](https://github.com/Mylliah/holbertonschool-low_level_pr
 
 ### ---- Task 2 : 
 
-    Program wich use loops printing the alphabet in lowercase, only using 'putchar' twice :
+    Program wich use loops printing the alphabet in lowercase, only using 'putchar' function twice max :
 
 program [2-print_alphabet.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/2-print_alphabet.c)
 
 ### ---- Task 3 : 
 
-    Program wich use loops printing the alphabet in lowercase, and then in uppercase, only using 'putchar' three times :
+    Program wich use loops printing the alphabet in lowercase, and then in uppercase, only using 'putchar' function three times :
 
 program [3-print_alphabets.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/3-print_alphabets.c)
 
 
 ### ---- Task 4 :
 
-    Program wich use loops printing all the letters of alphabet in lowercase except 'e' and 'q' and only using 'putchar' twice :
+    Program wich use loops printing all the letters of alphabet in lowercase except 'e' and 'q' and only using 'putchar' function twice max :
 
 program [4-print_alphabt.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/4-print_alphabt.c)
 
@@ -39,8 +39,28 @@ program [5-print_numbers.c](https://github.com/Mylliah/holbertonschool-low_level
 
 ### ---- Task 6 :
 
-    Program wich print all single digit numbers of base 10 starting from 0, not using any variable of type char, only use th putchar function twice (printf, puts, etc. is forbidden) :
+    Program wich print all single digit numbers of base 10 starting from 0, not using any variable of type char, only use the 'putchar' function twice max (printf, puts, etc. is forbidden) :
 
 program [6-print_numberz.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/6-print_numberz.c)
 
 
+### ---- Task 7 :
+
+    Program wich print the lowercase alphabet in reverse, ony use the 'putchar' function twice max (printf, puts, etc. is forbidden): 
+
+program [7-print_tebahpla.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/7-print_tebahpla.c)
+
+
+### ---- Task 8 :
+
+    Program wich print all the numbers of base 16 in lowercase, only use 'putchar' function three times max (printf, puts, etc. is forbidden):
+
+program [8-print_base16.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/8-print_base16.c)
+
+
+### ---- Task 9 : 
+
+    Program wich print all possible combinations of single-digit numbers, that must be separate by ", ", only use 'putchar' function four times max (printf, puts, etc. is forbidden):
+
+program [9-print_comb.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/9-print_comb.c) 
+Others possibilities : putchar(48 + num) or putchar(0x30 + num) and 'int' or char' ok 
