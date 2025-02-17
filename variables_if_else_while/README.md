@@ -23,4 +23,11 @@ program [2-print_alphabet.c](https://github.com/Mylliah/holbertonschool-low_leve
 program [3-print_alphabets.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/3-print_alphabets.c)
 
 
+### ---- Task 4 :
+
+    Programm wich use loops printing all the letters of alphabet in lowercase except 'e' and 'q' and only using 'putchar' twice :
+
+program [4-print_alphabt.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/4-print_alphabt.c)
+
+
 
