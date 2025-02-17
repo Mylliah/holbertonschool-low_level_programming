@@ -12,4 +12,16 @@
     - The right header to include in your source code when using a standard library function
     - How does the main function influence the return value of the program
 
+#### Project 2 : C - Variables, if, else, while
+
+    - What ASCII
+    - Incrémentation, décrémentation, conditions (if, else), boucles (while, do... while, for)
+    - libraries
+    - Relational operators
+    - Logical operators
+    - Arithmetic operators
+    - Boolean operators
+    - Variables and functions
+    - Use comments
+
 

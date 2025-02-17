@@ -63,4 +63,5 @@ program [8-print_base16.c](https://github.com/Mylliah/holbertonschool-low_level_
     Program wich print all possible combinations of single-digit numbers, that must be separate by ", ", only use 'putchar' function four times max (printf, puts, etc. is forbidden):
 
 program [9-print_comb.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/9-print_comb.c) 
-Others possibilities : putchar(48 + num) or putchar(0x30 + num) and 'int' or char' ok 
+
+Others possibilities : putchar(48 + num) or putchar(0x30 + num) and 'int' or 'char' ok 
