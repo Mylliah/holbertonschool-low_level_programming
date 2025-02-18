@@ -39,4 +39,20 @@ program [5-printf.c](https://github.com/Mylliah/holbertonschool-low_level_progra
 program [6-size.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/hello_world/6-size.c)
 
 
+### ---- task 7 :
+
+    (See blog)
+
+
+### ---- Task 8 :
+
+    Command used to generate the assembly code (Intel syntax) of a C code and save it in an output file, main.c become main.s : 
+    gcc -S -masm=intel $CFILE
+
+
+### ---- Task 9 : 
+
+    Command used to prints a text, followed by a new line, to the standard error, without use printf or puts (and its derivatives we can be seen in their respectives man. The result return 1 : 
+program [101-quote.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/hello_world/101-quote.c)
+
 
