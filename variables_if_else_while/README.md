@@ -64,4 +64,25 @@ program [8-print_base16.c](https://github.com/Mylliah/holbertonschool-low_level_
 
 program [9-print_comb.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/9-print_comb.c) 
 
-Others possibilities : putchar(48 + num) or putchar(0x30 + num) and 'int' or 'char' ok 
+Others possibilities : putchar(48 + num) or putchar(0x30 + num) and 'int' or 'char' ok
+
+
+### ---- Task 10 : 
+
+    Program wich print all possibile different combinations of two digits, separated by ',', 01 and 10 are considered the same combination of the two digits 0 and 1, print only the smallest combination of two digits, in ascending order, only use putchar (printf, puts, etc…) is forbidden), etc. :
+
+program [100-print_comb3.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/100-print_comb3.c)
+
+
+### ---- Task 11 :
+
+    Program wich print all possible different combinations of three digits, separated by ',', the three digits must be different, only the smallest combination of three digits, ascending order, with three digits, only use putchar (printf, puts, etc…) is forbidden), only use putchar six times max, not allowed to use any variable of type char :
+
+program [101-print_comb2.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/101-print_comb4.c)
+
+
+### ---- Task 12 :
+
+    Program wich print all possible combinations of two-digit numbers, numbers should range from 0 to 99, two numbers should be separated by a space, numbers should be printed with two digits, 1 should be printed as 01, combination of numbers must be separated by comma, followed by a space, printed in ascending order, only use the putchar function eight times max (printf, puts, etc…) is forbidden), not allowed to use any variable of type char :
+
+program [102-print_comb5.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/variables_if_else_while/102-print_comb5.c)
