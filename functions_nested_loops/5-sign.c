@@ -16,8 +16,8 @@ int print_sign(int result)
 	}
 	else if (result == 0)
 	{
-		_putchar(0);
-		return (1);
+		_putchar('0');
+		return (0);
 	}
 	else
 	{
