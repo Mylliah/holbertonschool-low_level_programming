@@ -24,4 +24,14 @@
     - Variables and functions
     - Use comments
 
+#### Project 3 : C - Functions, nested loops
+
+    - The nested loops
+    - The functions
+    - The difference between a declaration and a definition of a function
+    - The prototypes
+    - The scope of variables
+    - What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
+    - What are header files and how to to use them with #include
+
 
