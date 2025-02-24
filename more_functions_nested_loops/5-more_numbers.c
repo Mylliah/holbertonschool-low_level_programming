@@ -14,12 +14,9 @@ void more_numbers(void)
 		for (column = 0 ; column < 15 ; column++)
 		{
 			if (column >= 10)
-			{
-				_putchar(column / 10 + '0');
-				_putchar(column % 10 + '0');
-			}
-			else
-				_putchar(column + '0');
+				_putchar(column / 10 + '0');  /* ou _putchar('1'); */
+
+			_putchar(column % 10 + '0');
 		}
 		_putchar('\n');
 	}
