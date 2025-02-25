@@ -14,9 +14,9 @@ void print_diagonal(int n)
 	{
 		int row, column;
 
-		for (row = 0 ; row < n ; row++) /* if n = 4, row moves forward for 4 lines */
+		for (row = 0 ; row < n ; row++) /* row moves forward for n lines */
 		{
-			for (column = 0 ; column < n ; column++) /* if n = 4, column moves forward for 4 columns */
+			for (column = 0 ; column < n ; column++) /* column moves forward for n */
 			{
 				if (row == column) /* in same alignment */
 					_putchar(92); /* or '\\' */
