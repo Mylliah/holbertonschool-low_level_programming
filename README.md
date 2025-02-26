@@ -24,7 +24,7 @@
     - Variables and functions
     - Use comments
 
-#### Project 3 : C - Functions, nested loops
+#### Project 3 and 4 : C - Functions, nested loops
 
     - The nested loops
     - The functions
