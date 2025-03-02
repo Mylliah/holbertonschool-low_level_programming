@@ -34,4 +34,14 @@
     - What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
     - What are header files and how to to use them with #include
 
+#### Project 4 and 5 : C - Pointers, arrays and strings
+
+    - The pointers, how to use them
+    - The arrays, how to use them
+    - The differences between pointers and arrays
+    - The strings, how to manipulate them
+    - Scope of variables
+
+
+
 
