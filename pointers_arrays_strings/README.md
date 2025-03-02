@@ -68,3 +68,66 @@ program [8-print_array.c](https://github.com/Mylliah/holbertonschool-low_level_p
 program [9-strcpy.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/9-strcpy.c)
 
 
+### ---- Task 10 : 
+
+    Function that convert a string to an integer :
+
+program [100-atoi.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/100-atoi.c)
+
+__________________
+
+
+### ---- Task 0 :
+
+    Function that concatenates two strings :
+
+program [0-strcat.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/0-strcat.c)
+
+
+### ---- Task 1 : 
+
+    Function that concatenates two strings :
+
+program [1-strncat.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/1-strncat.c)
+
+
+### ---- Task 2 : 
+
+    Function that copies a string :
+
+program [2-strncpy.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/2-strncpy.c)
+
+
+### ---- Task 3 : 
+
+    Function that compares two strings :
+
+program [3-strcmp.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/3-strcmp.c)
+
+
+### ---- Task 4 : 
+
+    Function that reverses the content of an array of integers :
+
+program [4-rev_array.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/4-rev_array.c)
+
+
+### ---- Task 5 :
+
+    Function that changes all lowercase letters of a string to uppercase :
+
+program [5-string_toupper.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/5-string_toupper.c)
+
+
+### ---- Task 6 : 
+
+    Function that capitalizes all words of a string :
+
+program [6-cap_string.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/6-cap_string.c)
+
+
+### ---- Task 7 : 
+
+    Function that encodes a string into 1337 :
+
+program [7-leet.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/pointers_arrays_strings/7-leet.c)
