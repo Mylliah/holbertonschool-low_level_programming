@@ -31,17 +31,11 @@ char *str_concat(char *s1, char *s2)
 	if (fusion == NULL)
 		return (NULL);
 
-	while (i < len1)
-	{
+	for (i = 0 ; i < len1 ; i++)
 		fusion[i] = s1[i];
-		i++;
-	}
 
-	while (j < len2)
-	{
+	while (j = 0 ; j < len2 ; j++)
 		fusion[i + j] = s2[j];
-		j++;
-	}
 
 	fusion[i + j] = '\0';
 	return (fusion);
