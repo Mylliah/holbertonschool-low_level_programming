@@ -62,5 +62,10 @@
     - Why and when use malloc
     - How to use valgrind to check for memory leak
 
+#### Project 12 : C - Structures, typedef
+
+    - What are structures, when, why and how to use them
+    - How to use typedef
+
 
 
