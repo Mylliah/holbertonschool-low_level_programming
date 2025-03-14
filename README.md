@@ -34,7 +34,7 @@
     - What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
     - What are header files and how to to use them with #include
 
-#### Project 4 and 5 : C - Pointers, arrays and strings
+#### Project 4, 5 and 6 : C - Pointers, arrays and strings
 
     - The pointers, how to use them
     - The arrays, how to use them
@@ -42,6 +42,25 @@
     - The strings, how to manipulate them
     - Scope of variables
 
+#### Project 7 : C - Recursion
+
+    - What is recursion
+    - How to implement recursion
+    - In what situations you should implement recursion
+    - In what situations you shouldn't implement recursion
+
+#### Project 9 : C - argc, argv
+
+    - How to use arguments passed to your program
+    - What are two prototypes of main that you know of, and in wich case do you use one or the other
+    - How to use __attribute__((unused)) or (void) to compile functions with unused variables or parameters
+
+#### Project 10 and 11 : C - malloc, free
+
+    - The difference between automatic and dynamic allocation
+    - What is malloc and free and how to use them
+    - Why and when use malloc
+    - How to use valgrind to check for memory leak
 
 
 
