@@ -14,7 +14,10 @@
 
 void handle_error(const char *message, const char *filename, int exit_code)
 {
-	dprintf(STDERR_FILENO, "%s %s\n", message, filename);
+	if (filename)
+		dprintf(STDERR_FILENO, "%s %s\n", message, filename);
+	else
+		dprintf(STDERR_FILENO, "%s %d\n", message, exit_code);
 	exit(exit_code);
 }
 
@@ -61,10 +64,10 @@ void copy_file(const char *file_from_name, const char *file_to_name)
 	}
 
 	if (close(file_from) == -1)
-		handle_error("Error: Can't close fd", file_from_name, 100);
+		handle_error("Error: Can't close fd", NULL, file_from);
 
 	if (close(file_to) == -1)
-		handle_error("Error: Can't close fd", file_to_name, 100);
+		handle_error("Error: Can't close fd", NULL, file_to);
 }
 
 
