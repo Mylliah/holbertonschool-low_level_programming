@@ -12,13 +12,17 @@
  * @exit_code: exit code to use when exiting the program
  */
 
-void handle_error(const char *message, const char *filename, int exit_code)
+void handle_error(const char *message, const char *filename, int code)
 {
 	if (filename)
 		dprintf(STDERR_FILENO, "%s %s\n", message, filename);
 	else
-		dprintf(STDERR_FILENO, "%s %d\n", message, exit_code);
-	exit(exit_code);
+		dprintf(STDERR_FILENO, "%s %d\n", message, code);
+	
+	if (code >= 97 && code <= 100)
+		exit(code);
+	else
+		exit(1);	
 }
 
 /**
