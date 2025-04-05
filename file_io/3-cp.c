@@ -18,12 +18,12 @@ void check_close(int fd)
 
 /**
  * main - copies content from file_from to file_to
- * @argc: number of args
- * @argv: array of args
+ * @arg_c: number of args
+ * @arg_v: array of args
  *
  * Return: 0 on success, exits with codes 97-100 on error
  */
-int main(int argc, char **argv)
+int main(int arg_c, char **arg_v)
 {
 	int fd_from, fd_to;
 	ssize_t characters_read, characters_written;
