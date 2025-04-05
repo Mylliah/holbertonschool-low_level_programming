@@ -42,8 +42,7 @@ void error_fd(int code, int fd)
 void copy_file(const char *file_from_name, const char *file_to_name)
 {
 	int file_from, file_to;
-	ssize_t characters_read;
-	ssize_t characters_written;
+	ssize_t characters_read, characters_written;
 	char buffer[BUFFER_SIZE];
 
 	file_from = open(file_from_name, O_RDONLY);
