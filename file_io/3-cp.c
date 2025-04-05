@@ -5,101 +5,111 @@
 
 #define BUFFER_SIZE 1024
 
+
 /**
- * error_file - handles file-related errors
+ * print_error - prints error messages and exits with appropriate code
  * @code: exit code
- * @filename: name of the file causing the error
+ * @arg: argument related to the error
  */
 
-void error_file(int code, char *filename)
+void print_error(int code, char *arg)
 {
-	if (code == 98)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+	if (code == 97)
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	else if (code == 98)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg);
 	else if (code == 99)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-	exit(code);
-}
-
-/**
- * error_fd - handles file descriptor errors
- * @code: exit code
- * @fd: file descriptor value
- */
-
-void error_fd(int code, int fd)
-{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", arg);
+	else if (code == 100)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", *(int *)arg);
 	exit(code);
 }
 
 
 /**
- * copy_file - copies the content of one file to another
- * @file_from_name: name of the source file
- * @file_to_name: name of the destination file
+ * close_fd - closes a file descriptor and handles errors
+ * @fd: file descriptor to close
  */
 
-void copy_file(const char *file_from_name, const char *file_to_name)
+void close_fd(int fd)
 {
-	int file_from, file_to;
-	ssize_t characters_read, characters_written;
-	char buffer[BUFFER_SIZE];
-
-	file_from = open(file_from_name, O_RDONLY);
-	if (file_from == -1)
-		error_file(98, (char *)file_from_name);
-
-	file_to = open(file_to_name, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (file_to == -1)
-	{
-		close(file_from);
-		error_file(99, (char *)file_to_name);
-	}
-
-	while ((characters_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
-	{
-		characters_written = write(file_to, buffer, characters_read);
-		if (characters_written != characters_read)
-		{
-			close(file_from);
-			close(file_to);
-			error_file(99, (char *)file_to_name);
-		}
-	}
-
-	if (characters_read == -1)
-	{
-		close(file_from);
-		close(file_to);
-		error_file(98, (char *)file_from_name);
-	}
-
-	if (close(file_from) == -1)
-		error_fd(100, file_from);
-
-	if (close(file_to) == -1)
-		error_fd(100, file_to);
+	if (close(fd) == -1)
+		print_error(100, (char *)&fd);
 }
 
 
 /**
- * main - entry point of the program
- * @argc: number of arguments passed to the program
- * @argv: array of arguments
+ * open_file_from - opens the source file for reading
+ * @file_from: name of the file to read
  *
- * Return: 0 on success, or exists with an error code on failure
+ * Return: file descriptor
+ */
+
+int open_file_from(char *file_from)
+{
+	int fd = open(file_from, O_RDONLY);
+
+	if (fd == -1)
+		print_error(98, file_from);
+	return (fd);
+}
+
+/**
+ * open_file_to - opens or creates the destination file for writing
+ * @file_to: name of the file to write to
+ *
+ * Return: file descriptor
+ */
+
+int open_file_to(char *file_to)
+{
+	int fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+
+	if (fd == -1)
+		print_error(99, file_to);
+	return (fd);
+}
+
+
+/**
+ * main - entry point that copies content of a file to another
+ * @argc: number of args
+ * @argv: array of args
+ *
+ * Return: 0 on success, exits with relevant code on failure
  */
 
 int main(int argc, char *argv[])
 {
+	int fd_from, fd_to;
+	ssize_t rd, wr;
+	char buffer[BUFFER_SIZE];
+
 	if (argc != 3)
+		print_error(97, NULL);
+
+	fd_from = open_file_from(argv[1]);
+	fd_to = open_file_to(argv[2]);
+
+	while ((rd = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		wr = write(fd_to, buffer, rd);
+		if (wr != rd)
+		{
+			close_fd(fd_from);
+			close_fd(fd_to);
+			print_error(99, argv[2]);
+		}
+	}
+	if (rd == -1)
+	{
+		close_fd(fd_from);
+		close_fd(fd_to);
+		print_error(98, argv[1]);
 	}
 
-	copy_file(argv[1], argv[2]);
+	close_fd(fd_from);
+	close_fd(fd_to);
 
 	return (0);
 }
-
