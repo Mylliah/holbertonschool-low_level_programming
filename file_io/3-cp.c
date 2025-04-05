@@ -23,7 +23,7 @@ void check_close(int fd)
  *
  * Return: 0 on success, exits with codes 97-100 on error
  */
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
 	int fd_from, fd_to;
 	ssize_t characters_read, characters_written;
