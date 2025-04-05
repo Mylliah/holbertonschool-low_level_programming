@@ -6,24 +6,32 @@
 #define BUFFER_SIZE 1024
 
 /**
- * handle_error - prints an error message and exits with a specific code
- * @message: error message to print
+ * error_file - handles file-related errors
+ * @code: exit code
  * @filename: name of the file causing the error
- * @exit_code: exit code to use when exiting the program
  */
 
-void handle_error(const char *message, const char *filename, int code)
+void error_file(int code, char *filename)
 {
-	if (filename)
-		dprintf(STDERR_FILENO, "%s %s\n", message, filename);
-	else
-		dprintf(STDERR_FILENO, "%s %d\n", message, code);
-	
-	if (code >= 97 && code <= 100)
-		exit(code);
-	else
-		exit(1);	
+	if (code == 98)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+	else if (code == 99)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+	exit(code);
 }
+
+/**
+ * error_fd - handles file descriptor errors
+ * @code: exit code
+ * @fd: file descriptor value
+ */
+
+void error_fd(int code, int fd)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	exit(code);
+}
+
 
 /**
  * copy_file - copies the content of one file to another
@@ -40,13 +48,13 @@ void copy_file(const char *file_from_name, const char *file_to_name)
 
 	file_from = open(file_from_name, O_RDONLY);
 	if (file_from == -1)
-		handle_error("Error: Can't read from file", file_from_name, 98);
+		error_file(98, (char *)file_from_name);
 
 	file_to = open(file_to_name, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		close(file_from);
-		handle_error("Error: Can't write to", file_to_name, 99);
+		error_file(99, (char *)file_to_name);
 	}
 
 	while ((characters_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
@@ -56,7 +64,7 @@ void copy_file(const char *file_from_name, const char *file_to_name)
 		{
 			close(file_from);
 			close(file_to);
-			handle_error("Error: Can't write to", file_to_name, 99);
+			error_file(99, (char *)file_to_name);
 		}
 	}
 
@@ -64,14 +72,14 @@ void copy_file(const char *file_from_name, const char *file_to_name)
 	{
 		close(file_from);
 		close(file_to);
-		handle_error("Error: Can't read from file", file_from_name, 98);
+		error_file(98, (char *)file_from_name);
 	}
 
 	if (close(file_from) == -1)
-		handle_error("Error: Can't close fd", NULL, file_from);
+		error_fd(100, file_from);
 
 	if (close(file_to) == -1)
-		handle_error("Error: Can't close fd", NULL, file_to);
+		error_fd(100, file_to);
 }
 
 
