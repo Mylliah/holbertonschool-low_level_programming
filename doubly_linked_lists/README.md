@@ -60,4 +60,3 @@ program [7-insert_dnodeint.c](https://github.com/Mylliah/holbertonschool-low_lev
 
 program [8-delete_dnodeint.c](https://github.com/Mylliah/holbertonschool-low_level_programming/blob/main/doubly_linked_lists/8-delete_dnodeint.c)
 
-
