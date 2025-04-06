@@ -79,4 +79,32 @@
     - How to use va_start, va_arg and va_end
     - Why and how to use the const type qualifier
 
+#### Project 15 : C - Singly linked lists
+
+    - When and why using linked lists vs arrays
+    - How to build and use linked lists
+
+#### Project 16 : C - Doubly linked lists
+
+    - What is a doubly linked list
+    - How to use doubly linked lists
+    - Start to look for the right source of information without too much help
+
+#### Project 17 : C - Bit manipulation
+
+    - Look for the right source of information without too much help
+    - How to manipulate bits and use bitwise operators
+
+#### Project 18 : C - File I/O
+
+    - Look for the right source of information online
+    - How to create, open, close, read and write files
+    - What are file descriptors
+    - What are the 3 standard file descriptors, what are their purpose and what are their POSIX names
+    - How to use the I/O system calls open, close, read and write
+    - What are and how to use the flags O_RDONLY, O_WRONLY, O_RDWR
+    - What are file permissions, and how to set them when creating a file with the open system call
+    - What is a system call
+    - What is the difference between a function and a system call
+
 
